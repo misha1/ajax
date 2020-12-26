@@ -65,7 +65,7 @@ $service = new Google_Service_Sheets($client);
 // https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
 $spreadsheetId = '1LH-hiJfBk3YrhHaLjzpNg9RnFoBV9H7tSIoVqSn1liA';
 
-$mysqli = new Mysqli('localhost', 'root', 'root', 'mybase');
+$mysqli = mysqli_connect('localhost', 'root', 'root', 'mybase');
 $products = mysqli_query($mysqli, "SELECT * FROM `userss` WHERE age>18");
 $products = mysqli_fetch_all($products);
 
@@ -75,7 +75,7 @@ $a = 2;
 foreach ($products as $product) {
     $range = "list1!A{$a}:D";
     $values = [
-        ["$product[0]", "$product[1]", "$product[2]", $product[3]],
+        ["$product[0]", "$product[1]", "$product[2]", "$product[3]"],
     ];
     $a++;
     $data = [];

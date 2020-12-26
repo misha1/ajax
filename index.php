@@ -10,7 +10,7 @@
     <input type="submit" value="отправить" class="button">
 </form>
 
-<form action="quickstart.php">
+<form action="quickstart.php"">
     <input type="submit" value="выгрузить" class="button2">
 </form>
 

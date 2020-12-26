@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a01f25df-b394-408b-9ae7-d55a7f97328e" name="Default Changelist" comment="" />
+    <list default="true" id="a01f25df-b394-408b-9ae7-d55a7f97328e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/for_db.php" beforeDir="false" afterPath="$PROJECT_DIR$/for_db.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quickstart.php" beforeDir="false" afterPath="$PROJECT_DIR$/quickstart.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -11,7 +16,11 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1lz0qJkBc8UoiKhlPDiXsfdjIM6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -19,7 +28,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laravel" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -48,7 +57,8 @@
       <option name="presentableId" value="Default" />
       <updated>1608584801923</updated>
       <workItem from="1608584803176" duration="6203000" />
-      <workItem from="1608613841304" duration="16805000" />
+      <workItem from="1608613841304" duration="23397000" />
+      <workItem from="1608820710151" duration="44000" />
     </task>
     <servers />
   </component>
@@ -56,13 +66,17 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="740" y="279" key="FileChooserDialogImpl" timestamp="1608820757504">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1608820757504" />
     <state x="794" y="448" key="NewPhpFileDialog" timestamp="1608614649975">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="794" y="448" key="NewPhpFileDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1608614649975" />
-    <state x="1096" y="263" width="672" height="678" key="search.everywhere.popup" timestamp="1608616336965">
+    <state x="708" y="313" width="672" height="678" key="search.everywhere.popup" timestamp="1608649310062">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="1096" y="263" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1608616336965" />
+    <state x="708" y="313" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1608649310062" />
   </component>
 </project>

@@ -1,5 +1,5 @@
 <?
-$mysqli = new Mysqli('localhost', 'root', 'root', 'mybase');
+$mysqli = mysqli_connect('localhost', 'root', 'root', 'mybase');
 /** Получаем наш ID статьи из запроса */
 $name = trim($_POST['name']);
 $surname = trim($_POST['surname']);
@@ -16,10 +16,10 @@ if($name && $surname && $age){
 	$query2 = $mysqli->query("SELECT * FROM `userss` ORDER BY `id` DESC");
 
 	while($row = $query2->fetch_assoc()){
-		$users['id'][] = $row['id'];
-		$users['name'][] = $row['name'];
-		$users['surname'][] = $row['surname'];
-		$users['age'][] = $row['age'];
+		$userss['id'][] = $row['id'];
+		$userss['name'][] = $row['name'];
+		$userss['surname'][] = $row['surname'];
+		$userss['age'][] = $row['age'];
 	}
 	$message = 'Все хорошо';
 }else{
@@ -32,7 +32,7 @@ if($name && $surname && $age){
 // Формируем масив данных для отправки
 $out = array(
 	'message' => $message,
-	'users' => $users
+	'users' => $userss
 );
 
 // Устанавливаем заголовот ответа в формате json
