@@ -73,25 +73,23 @@ $a = 2;
 
 
 foreach ($products as $product) {
-    $range = "list1!A{$a}:D";
+	$range = "list1!A{$a}:D";
+	
     $values = [
         ["$product[0]", "$product[1]", "$product[2]", "$product[3]"],
     ];
-    $a++;
-    $data = [];
-    $data[] = new Google_Service_Sheets_ValueRange([
-        'range' => $range,
-        'values' => $values
-    ]);
-    // Additional ranges to update ...
-    $body = new Google_Service_Sheets_BatchUpdateValuesRequest([
-        'valueInputOption' => 'RAW',
-        'data' => $data
-    ]);
+	
+	$a++;
+	
+	$body = new Google_Service_Sheets_ValueRange([
+		'values' => $values
+	]);
+	$params = [
+		'valueInputOption' => 'RAW'
+	];
+	$result = $service->spreadsheets_values->update($spreadsheetId, $range,
+	$body, $params);
+	printf("%d cells updated.", $result->getUpdatedCells());
 
-    $result = $service->spreadsheets_values->batchUpdate($spreadsheetId, $body);
 }
-printf("%d Добавлен в эксел.", $result->getTotalUpdatedCells());
-header('Location: /');
-
 
