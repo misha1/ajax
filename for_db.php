@@ -1,5 +1,8 @@
 <?
-$mysqli = mysqli_connect('localhost', 'root', 'root', 'mybase');
+
+require_once 'config/connect.php';
+
+
 /** Получаем наш ID статьи из запроса */
 $name = trim($_POST['name']);
 $surname = trim($_POST['surname']);
@@ -8,14 +11,14 @@ $age = intval($_POST['age']);
 /** Если нам передали ID то обновляем */
 if($name && $surname && $age){
 	//вставляем запись в БД
-	$query = $mysqli->query("INSERT INTO `userss` VALUES(NULL, '$name', '$surname', '$age')");
+	$query = $pdo->query("INSERT INTO `userss` VALUES(NULL, '$name', '$surname', '$age')");
 	
 	
 	
 	//извлекаем все записи из таблицы
-	$query2 = $mysqli->query("SELECT * FROM `userss` ORDER BY `id` DESC");
+	$query2 = $pdo->query("SELECT * FROM `userss` ORDER BY `id` DESC");
 
-	while($row = $query2->fetch_assoc()){
+	while($row = $query2->fetch(PDO::FETCH_ASSOC)){
 		$userss['id'][] = $row['id'];
 		$userss['name'][] = $row['name'];
 		$userss['surname'][] = $row['surname'];

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "566b298913829ffc1df98fbece4f9631",
+    "content-hash": "6a152158765924c60d7a2b90fc7d197d",
     "packages": [
         {
             "name": "firebase/php-jwt",
@@ -701,7 +701,9 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "ext-mysqli": "*"
+    },
     "platform-dev": [],
     "plugin-api-version": "1.1.0"
 }

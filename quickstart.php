@@ -1,6 +1,6 @@
 <?php
 require __DIR__ . '/vendor/autoload.php';
-
+require_once 'config/connect.php';
 
 
 /**
@@ -65,21 +65,18 @@ $service = new Google_Service_Sheets($client);
 // https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
 $spreadsheetId = '1LH-hiJfBk3YrhHaLjzpNg9RnFoBV9H7tSIoVqSn1liA';
 
-$mysqli = mysqli_connect('localhost', 'root', 'root', 'mybase');
-$products = mysqli_query($mysqli, "SELECT * FROM `userss` WHERE age>18");
-$products = mysqli_fetch_all($products);
+$query2 = $pdo->query("SELECT * FROM `userss` WHERE age>18")->fetchAll(PDO::FETCH_NUM);
 
 $a = 2;
 
-
-foreach ($products as $product) {
+foreach ($query2 as $product) {
 	$range = "list1!A{$a}:D";
-	
+
+    $a++;
     $values = [
         ["$product[0]", "$product[1]", "$product[2]", "$product[3]"],
     ];
-	
-	$a++;
+
 	
 	$body = new Google_Service_Sheets_ValueRange([
 		'values' => $values
