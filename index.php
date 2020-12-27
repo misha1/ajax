@@ -10,7 +10,7 @@
     <input type="submit" value="отправить" class="button">
 </form>
 
-<form action="quickstart.php"">
+<form action="quickstart.php">
     <input type="submit" value="выгрузить" class="button2">
 </form>
 
@@ -21,15 +21,18 @@
 
 <script>
     jQuery(document).ready(function() {
-        jQuery(".button").bind("click", function() {
+        jQuery(".button").bind("click", function(event) {
+
+            event.preventDefault(); // отменяем событие по умолчанию
+            if ( validateForm() ) { // если есть ошибки возвращает true
+                return false; // прерываем выполнение скрипта
+            }
+
 
             var name = jQuery('.nameField').val();
             var surname = jQuery('.surnameField').val();
             var age = jQuery('.ageField').val();
 
-            jQuery('.nameField').val('');
-            jQuery('.surnameField').val('');
-            jQuery('.ageField').val('');
 
             jQuery.ajax({
                 url: "for_db.php",
@@ -53,7 +56,39 @@
                     return false;
                 }
             });
-            return false;
+
+            function validateForm() {
+                $(".text-error").remove();
+
+                // Проверка имени
+                var el_n    = $(".nameField");
+                if (  !(/^[а-яА-ЯёЁa-zA-Z]+$/.test(el_n.val())) ) {
+                    var v_name = true;
+                    el_n.after('<span class="text-error">Ошибка! Введите имя</span>');
+                }
+                $(".nameField").toggleClass('error', v_name );
+
+                // Проверка Фамилии
+                var el_s    = $(".surnameField");
+                if (  !(/^[а-яА-ЯёЁa-zA-Z]+$/.test(el_s.val())) ) {
+                    var v_surname = true;
+                    el_s.after('<span class="text-error">Ошибка! Введите фамилию</span>');
+                }
+                $(".surnameField").toggleClass('error', v_surname );
+
+                // Проверка возраста
+                var el_a    = $(".ageField");
+                if (  !(/^[0-9]+$/.test(el_a.val())) || el_a.val().length > 2 ) {
+                    var v_age = true;
+                    el_a.after('<span class="text-error">Ошибка! Введите возраст</span>');
+                }
+                $(".ageField").toggleClass('error', v_age);
+
+
+                return ( v_name || v_surname || v_age);
+            }
+
+
         });
     });
 </script>
