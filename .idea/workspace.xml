@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a01f25df-b394-408b-9ae7-d55a7f97328e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/for_db.php" beforeDir="false" afterPath="$PROJECT_DIR$/for_db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quickstart.php" beforeDir="false" afterPath="$PROJECT_DIR$/quickstart.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/google/apiclient/src/Google/Service/Resource.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/google/apiclient/src/Google/Service/Resource.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +75,8 @@
       <workItem from="1608613841304" duration="23397000" />
       <workItem from="1608820710151" duration="44000" />
       <workItem from="1609057980423" duration="5457000" />
-      <workItem from="1609083205677" duration="4897000" />
+      <workItem from="1609083205677" duration="5606000" />
+      <workItem from="1609305439779" duration="2177000" />
     </task>
     <servers />
   </component>
